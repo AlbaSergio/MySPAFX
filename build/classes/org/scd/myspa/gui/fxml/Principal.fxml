@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1196.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.scd.myspa.gui.PrincipalController">
+    <children>
+        <BorderPane layoutX="200.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <TabPane prefHeight="200.0" prefWidth="200.0" styleClass="boton1" stylesheets="@../../resources/estilo_myspa.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab text="Producto">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="900.0">
+                                    <fx:include fx:id="producto" source="Producto.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                </AnchorPane>
+                            </content>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="BOOK" />
+                            </graphic>
+                        </Tab>
+                        <Tab text="Empleado">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="900.0">
+                                    <fx:include fx:id="empleado" source="Empleado.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                </AnchorPane>
+                            </content>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="USER" />
+                            </graphic>
+                        </Tab>
+                        <Tab text="Cliente">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="900.0">
+                                    <fx:include fx:id="cliente" source="Cliente.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                </AnchorPane>
+                            </content>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="USERS" />
+                            </graphic>
+                        </Tab>
+                        <Tab text="Sucursal">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <fx:include fx:id="sucursal" source="Sucursal.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                </AnchorPane>
+                            </content>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="MAP" />
+                            </graphic>
+                        </Tab>
+                        
+                        <Tab text="Horario">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="900.0">
+                                    <fx:include fx:id="horario" source="Horario.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                </AnchorPane>
+                            </content>
+                            <graphic>
+                                <FontAwesomeIconView glyphName="CLOCK_ALT" />
+                            </graphic>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

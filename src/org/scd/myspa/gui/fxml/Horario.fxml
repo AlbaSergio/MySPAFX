@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchor" prefHeight="600.0" prefWidth="1196.0" stylesheets="@../../resources/estilo_myspa.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.scd.myspa.gui.HorarioController">
+   <children>  
+    <BorderPane layoutY="-2.0" prefHeight="600.0" prefWidth="1196.0" styleClass="anchor" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+         <top>
+            <AnchorPane prefHeight="60.0" prefWidth="900.0" styleClass="barra" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="14.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="800.0" AnchorPane.topAnchor="4.0">
+                     <image>
+                        <Image url="@../../resources/logoSPA.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="392.0" layoutY="10.0" styleClass="tModulos" text="Horario" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="6.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="CLOCK_ALT" size="18.0" />
+                     </graphic></Label>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="540.0" prefWidth="466.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="23.0" prefHeight="32.0" prefWidth="215.0" styleClass="tlogin" stylesheets="@../../resources/estilo_myspa.css" text="Detalle" AnchorPane.leftAnchor="84.0" AnchorPane.rightAnchor="118.0" AnchorPane.topAnchor="23.0">
+                     <font>
+                        <Font name="Century Gothic Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnGuardar" layoutX="30.0" layoutY="258.0" onAction="#saveHorario" text="Guardar" textFill="#088fe4">
+                     <graphic>
+                        <FontAwesomeIconView fill="#088fe4" fontSmoothingType="LCD" glyphName="SAVE" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnEliminar" layoutX="233.0" layoutY="258.0" onAction="#deleteHorario" text="Eliminar" textFill="#db0f0f">
+                     <graphic>
+                        <FontAwesomeIconView fill="#db0f0f" glyphName="TRASH" />
+                     </graphic>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="20.0" layoutY="117.0" prefHeight="26.0" prefWidth="154.0" styleClass="boton" text="Código del Horario:" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="243.0" AnchorPane.topAnchor="117.0" />
+                  <Label alignment="CENTER" layoutX="21.0" layoutY="157.0" prefHeight="26.0" prefWidth="152.0" styleClass="boton" text="Hora de Inicio" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="244.0" AnchorPane.topAnchor="157.0" />
+                  <Label alignment="CENTER" layoutX="20.0" layoutY="202.0" prefHeight="26.0" prefWidth="153.0" styleClass="boton" text="Hora de Finalizacion:" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="244.0" AnchorPane.topAnchor="202.0" />
+                  <JFXButton fx:id="btnNuevo" layoutX="338.0" layoutY="258.0" onAction="#limpiarFormulario" text="Nuevo" textFill="#16aa03">
+                     <graphic>
+                        <FontAwesomeIconView fill="#16aa03" glyphName="EDIT" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtCodigo" alignment="CENTER" editable="false" focusColor="#ffe0b2" layoutX="234.0" layoutY="117.0" prefHeight="25.0" prefWidth="63.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="117.0" />
+                  <JFXTextField fx:id="txtHoraInicio" alignment="CENTER" focusColor="#ffe0b2" layoutX="234.0" layoutY="158.0" prefHeight="25.0" prefWidth="87.0" promptText="00:00" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="96.0" AnchorPane.topAnchor="158.0" />
+                  <JFXTextField fx:id="txtHoraFin" alignment="CENTER" focusColor="#ffe0b2" layoutX="234.0" layoutY="203.0" prefHeight="25.0" prefWidth="138.0" promptText="00:00" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="94.0" AnchorPane.topAnchor="203.0" />
+                  <JFXButton fx:id="btnModificar" layoutX="121.0" layoutY="258.0" onAction="#updateHorario" text="Modificar" textFill="#ff970a">
+                     <graphic>
+                        <FontAwesomeIconView fill="#ff970a" glyphName="RETWEET" />
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="540.0" prefWidth="716.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="29.0" layoutY="60.0" prefHeight="26.0" prefWidth="81.0" styleClass="boton" text="Buscar:" />
+                  <TableView fx:id="tblHorario" onMouseClicked="#mostrarDetalleHorario" prefHeight="324.0" prefWidth="635.0" styleClass="boton1" stylesheets="@../../resources/estilo_myspa.css" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="92.0">
+                    <columns>
+                      <TableColumn fx:id="colCodigo" prefWidth="89.0" text="Código" />
+                        <TableColumn fx:id="colHoraFin" prefWidth="288.66668701171875" text="Hora final" />
+                      <TableColumn fx:id="colHoraIn" prefWidth="256.0" text="Hora inicio" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="284.0" layoutY="14.0" prefHeight="32.0" prefWidth="190.0" styleClass="tlogin" stylesheets="@../../resources/estilo_myspa.css" text="Catálogo">
+                     <font>
+                        <Font name="Century Gothic Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtFiltro" alignment="CENTER" focusColor="#ffe0b2" onKeyReleased="#txtFiltro" prefHeight="25.0" prefWidth="543.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="66.0" AnchorPane.topAnchor="60.0" />
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

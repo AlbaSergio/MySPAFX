@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="800.0" styleClass="anchor" stylesheets="@../../resources/estilo_myspa.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.scd.myspa.gui.LoginController">
+   <children>
+      <ImageView fitHeight="157.0" fitWidth="149.0" layoutX="101.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../resources/logoSPA.png" />
+         </image>
+         <effect>
+            <Blend>
+               <topInput>
+                  <Reflection />
+               </topInput>
+            </Blend>
+         </effect>
+      </ImageView>
+      <Line endX="-139.66668701171875" endY="280.0" layoutX="540.0" layoutY="54.0" opacity="0.57" startX="-139.66668701171875" startY="-24.666671752929688" stroke="#e36009ba" strokeWidth="2.0" />
+      <Label alignment="CENTER" layoutX="601.0" layoutY="29.0" styleClass="tlogin" stylesheets="@../../resources/estilo_myspa.css" text="Inicio de Sesión" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="29.0">
+         <font>
+            <Font name="Century Gothic" size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUsuario" alignment="CENTER" focusColor="#e05809ba" labelFloat="true" layoutX="548.0" layoutY="80.0" opacity="0.57" promptText="Usuario" styleClass="boton1" unFocusColor="#4d4d4d" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="327.0" layoutY="369.0" styleClass="titulo1" stylesheets="@../../resources/estilo_myspa.css" text="© Copyright a SCD" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnIngresar" buttonType="RAISED" layoutX="468.0" layoutY="243.0" onAction="#validarUsuario" opacity="0.78" ripplerFill="#e885047d" styleClass="boton" stylesheets="@../../resources/estilo_myspa.css" text="Ingresar">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnSalir" buttonType="RAISED" layoutX="675.0" layoutY="242.0" onAction="#salir" opacity="0.78" ripplerFill="#e885047d" styleClass="boton" stylesheets="@../../resources/estilo_myspa.css" text="Salir">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXPasswordField fx:id="txtPassword" alignment="CENTER" focusColor="#e35d09" labelFloat="true" layoutX="450.0" layoutY="187.0" prefHeight="25.0" prefWidth="300.0" promptText="Contraseña" styleClass="boton1" unFocusColor="#4d4d4dd1" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/10/2021, 07:21:48 AM
+    Author     : zende
+*/
+
+.anchor{
+    -fx-background-color: #FFEFBA;
+    -fx-background-color : linear-gradient(to right, #FFFFFF, #FFEFBA);
+}
+.barra{
+    -fx-background-color: #FFE0B2;
+}
+.titulo1{
+    -fx-text-align: center;
+    -fx-background-size: 18px;
+    -fx-font-family: 'Lucida Calligraphy', Italic;
+    -fx-color:black;
+}
+.titulo2{
+    -fx-text-align: center;
+    -fx-background-size: 15px;
+    -fx-font-family: 'Lucida Calligraphy', Italic;
+    -fx-color:black;
+}
+.boton{
+    -fx-background-color: #FFE0B2;
+    -fx-text-align: center;
+    -fx-background-size: 25px;
+    -fx-font-family: 'Lucida Calligraphy', Italic;
+    
+}
+.boton1{
+    
+    -fx-text-align: center;
+    -fx-background-size: 25px;
+    -fx-font-family: 'Lucida Calligraphy', Italic;
+    
+}
+.tlogin{
+    -fx-text-align: center;
+    -fx-background-size: 18px;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Lucida Calligraphy', Italic;
+    -fx-color: black;
+}
+.tModulos{
+    -fx-text-align: center;
+    -fx-background-size: 18px;
+    -fx-font-size: 30px;
+    -fx-font-family: 'Lucida Calligraphy', Bold,Italic;
+    -fx-color: black;
+}

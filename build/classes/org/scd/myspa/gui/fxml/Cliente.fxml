@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1196.0" styleClass="anchor" stylesheets="@../../resources/estilo_myspa.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.scd.myspa.gui.ClienteController">
+   <children>
+      <BorderPane layoutY="-2.0" prefHeight="600.0" prefWidth="1196.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-2.0">
+         <top>
+            <AnchorPane prefHeight="60.0" prefWidth="900.0" styleClass="barra" stylesheets="@../../resources/estilo_myspa.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="133.0" layoutY="19.0" styleClass="tModulos" stylesheets="@../../resources/estilo_myspa.css" text="Clientes" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="-24.0">
+                     <graphic>
+                        <FontAwesomeIconView glyphName="USERS" size="20" />
+                     </graphic>
+                  </Label>
+                  <ImageView fitHeight="50.0" fitWidth="100.0" layoutX="22.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/logoSPA.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </top>
+         <right>
+            <AnchorPane prefHeight="540.0" prefWidth="626.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTextField fx:id="txtFiltro" focusColor="#ffe0b2" layoutX="91.0" layoutY="89.0" onKeyReleased="#txtFiltro" prefHeight="25.0" prefWidth="525.0" AnchorPane.leftAnchor="91.0" AnchorPane.rightAnchor="10.0" />
+                  <TableView fx:id="tblCliente" layoutX="8.0" layoutY="134.0" onMouseClicked="#mostrarDetalleCliente" prefHeight="307.0" prefWidth="611.0" styleClass="boton1" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="134.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="49.0" text="ID" />
+                      <TableColumn fx:id="colNombre" prefWidth="144.0" text="Nombre" />
+                        <TableColumn fx:id="colRFC" prefWidth="132.33331298828125" text="RFC" />
+                        <TableColumn fx:id="colDomicilio" prefWidth="188.66668701171875" text="Domicilio" />
+                        <TableColumn fx:id="colEstatus" prefWidth="100.33331298828125" text="Estatus" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="9.0" layoutY="23.0" prefHeight="28.0" prefWidth="206.0" style="-fx-alignment: center;" styleClass="tlogin" stylesheets="@../../resources/estilo_myspa.css" text="Catálogo" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="21.0">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="91.0" prefHeight="20.0" prefWidth="78.0" style="-fx-background-color: #FFE0B2;" text="Buscar:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <AnchorPane prefHeight="540.0" prefWidth="549.0" stylesheets="@../../resources/estilo_myspa.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="41.0" layoutY="138.0" text="Datos Personales" textFill="#ff9800">
+                     <graphic>
+                        <FontAwesomeIconView fill="#ffb74d" glyphName="USER" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="50.0" layoutY="19.0" prefHeight="32.0" prefWidth="346.0" styleClass="tlogin" stylesheets="@../../resources/estilo_myspa.css" text="Detalle" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="19.0" />
+                  <Label alignment="CENTER" layoutX="36.0" layoutY="238.0" prefHeight="20.0" prefWidth="120.0" style="-fx-background-color: #FFE0B2;" text="Género:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="cmbGenero" focusColor="#ffe0b2" layoutX="37.0" layoutY="258.0" prefHeight="20.0" prefWidth="120.0" unFocusColor="BLACK" />
+                  <Label alignment="CENTER" layoutX="182.0" layoutY="238.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: #FFE0B2;" text="RFC:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="380.0" layoutY="238.0" prefHeight="20.0" prefWidth="130.0" style="-fx-background-color: #FFE0B2;" text="Teléfono:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="36.0" layoutY="165.0" prefHeight="20.0" prefWidth="122.0" style="-fx-background-color: #FFE0B2;" text="Nombre(s):">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtNombre" alignment="CENTER" focusColor="#ffe0b2" layoutX="38.0" layoutY="188.0" prefHeight="25.0" prefWidth="118.0" unFocusColor="BLACK" />
+                  <Label alignment="CENTER" layoutX="182.0" layoutY="165.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: #FFE0B2;" text="Primer Apellido:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtApePaterno" alignment="CENTER" focusColor="#ffe0b2" layoutX="175.0" layoutY="188.0" prefHeight="25.0" prefWidth="163.0" unFocusColor="BLACK" />
+                  <Label alignment="CENTER" layoutX="356.0" layoutY="165.0" prefHeight="20.0" prefWidth="178.0" style="-fx-background-color: #FFE0B2;" text="Segundo Apellido:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtApeMaterno" alignment="CENTER" focusColor="#ffe0b2" layoutX="354.0" layoutY="188.0" prefHeight="25.0" prefWidth="178.0" unFocusColor="BLACK" />
+                  <Label alignment="CENTER" layoutX="34.0" layoutY="57.0" prefHeight="20.0" prefWidth="125.0" style="-fx-background-color: #FFE0B2;" text="Código de Cliente">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtIdClie" alignment="CENTER" editable="false" layoutX="161.0" layoutY="54.0" prefHeight="25.0" prefWidth="46.0" />
+                  <JFXTextField fx:id="txtIdPersona" alignment="CENTER" editable="false" layoutX="219.0" layoutY="54.0" prefHeight="25.0" prefWidth="52.0" />
+                  <JFXTextField fx:id="txtIdUsuario" alignment="CENTER" editable="false" layoutX="284.0" layoutY="53.0" prefHeight="25.0" prefWidth="45.0" />
+                  <Label alignment="CENTER" layoutX="37.0" layoutY="289.0" prefHeight="20.0" prefWidth="172.0" style="-fx-background-color: #FFE0B2;" text="Email:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtCorreo" alignment="CENTER" focusColor="#ffe0b2" layoutX="31.0" layoutY="309.0" prefHeight="25.0" prefWidth="184.0" unFocusColor="BLACK" />
+                  <JFXButton fx:id="btnGuardar" layoutX="60.0" layoutY="485.0" onAction="#saveDatosCliente" text="Guardar" textFill="#2196f3">
+                     <graphic>
+                        <FontAwesomeIconView fill="#2196f3" glyphName="SAVE" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnModificar" layoutX="177.0" layoutY="485.0" onAction="#updateDatosCliente" text="Modificar" textFill="#ff970a">
+                     <graphic>
+                        <FontAwesomeIconView fill="#ff970a" glyphName="RETWEET" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField fx:id="txtRFC" alignment="CENTER" focusColor="#ffe0b2" layoutX="181.0" layoutY="258.0" prefHeight="25.0" prefWidth="152.0" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="txtTelefono" alignment="CENTER" focusColor="#ffe0b2" layoutX="378.0" layoutY="258.0" prefHeight="25.0" prefWidth="135.0" unFocusColor="BLACK" />
+                  <Label alignment="CENTER" layoutX="234.0" layoutY="290.0" prefHeight="19.0" prefWidth="281.0" styleClass="boton" stylesheets="@../../resources/estilo_myspa.css" text="Dirección:" />
+                  <JFXTextField fx:id="txtDireccion" alignment="CENTER" focusColor="#ffe0b2" layoutX="242.0" layoutY="309.0" prefHeight="25.0" prefWidth="271.0" unFocusColor="BLACK" />
+                  <Label layoutX="35.0" layoutY="393.0" text="Datos de Seguridad" textFill="#ff9800">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="#ff9800" glyphName="LOCK" />
+                     </graphic>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="40.0" layoutY="420.0" prefHeight="20.0" prefWidth="125.0" style="-fx-background-color: #FFE0B2;" text="Usuario:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtUsuario" alignment="CENTER" focusColor="#ffe0b2" layoutX="41.0" layoutY="438.0" prefHeight="20.0" prefWidth="125.0" unFocusColor="BLACK" />
+                  <Label alignment="CENTER" layoutX="199.0" layoutY="420.0" prefHeight="20.0" prefWidth="186.0" style="-fx-background-color: #FFE0B2;" text="Contraseña:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="409.0" layoutY="420.0" prefHeight="20.0" prefWidth="125.0" style="-fx-background-color: #FFE0B2;" text="Rol:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtRol" alignment="CENTER" editable="false" focusColor="#ffe0b2" layoutX="403.0" layoutY="438.0" prefHeight="25.0" prefWidth="130.0" unFocusColor="BLACK" />
+                  <Label alignment="CENTER" layoutX="38.0" layoutY="342.0" prefHeight="20.0" prefWidth="130.0" style="-fx-background-color: #FFE0B2;" text="Estatus:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtEstatus" alignment="CENTER" editable="false" focusColor="#ffe0b2" layoutX="68.0" layoutY="362.0" prefHeight="25.0" prefWidth="71.0" unFocusColor="BLACK" />
+                  <JFXButton fx:id="btnEliminar" layoutX="302.0" layoutY="485.0" onAction="#deletDatosCliente" text="Eliminar" textFill="RED">
+                     <graphic>
+                        <FontAwesomeIconView fill="RED" glyphName="TRASH" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnNuevo" layoutX="435.0" layoutY="485.0" onAction="#limpiarFormulario" text="Nuevo" textFill="#16aa03">
+                     <graphic>
+                        <FontAwesomeIconView fill="#16aa03" glyphName="EDIT" />
+                     </graphic>
+                  </JFXButton>
+                  <Label alignment="CENTER" layoutX="35.0" layoutY="91.0" prefHeight="20.0" prefWidth="213.0" style="-fx-background-color: #FFE0B2;" text="Ruta Fotografía:">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="257.0" layoutY="91.0" prefHeight="20.0" prefWidth="137.0" style="-fx-background-color: #FFE0B2;" text="Número de Cliente">
+                     <font>
+                        <Font name="Lucida Calligraphy Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtRutaFoto" focusColor="#ffe0b2" layoutX="38.0" layoutY="111.0" prefHeight="25.0" prefWidth="213.0" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="txtNumCliente" alignment="CENTER" focusColor="#ffe0b2" layoutX="259.0" layoutY="111.0" prefHeight="25.0" prefWidth="137.0" unFocusColor="BLACK" />
+                  <ImageView fx:id="imgCliente" fitHeight="91.0" fitWidth="122.0" layoutX="443.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/avatar.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="btnCargar" layoutX="422.0" layoutY="111.0" onAction="#cargarFoto" prefHeight="25.0" prefWidth="126.0" text="Cargar Fotografía" textFill="#16aa03">
+                     <graphic>
+                        <FontAwesomeIconView fill="#16aa03" glyphName="UPLOAD" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXPasswordField fx:id="txtPassword" focusColor="#ffe0b2" layoutX="195.0" layoutY="438.0" prefHeight="25.0" prefWidth="191.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

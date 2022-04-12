@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MySPAFX.jnlp">
+  <information>
+    <title>MySPAFX</title>
+    <vendor>zende</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MySPAFX.jar" size="670221" download="eager" />
+    <jar href="lib\aopalliance-repackaged-2.4.0-b34.jar" size="14766" download="eager" />
+    <jar href="lib\asm-debug-all-5.0.4.jar" size="379036" download="eager" />
+    <jar href="lib\bootstrapfx-core-0.4.0.jar" size="27378" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\gson-2.8.0.jar" size="231952" download="eager" />
+    <jar href="lib\gson-2.8.2-javadoc.jar" size="263440" download="eager" />
+    <jar href="lib\gson-2.8.2-sources.jar" size="147855" download="eager" />
+    <jar href="lib\hk2-api-2.4.0-b34.jar" size="178947" download="eager" />
+    <jar href="lib\hk2-locator-2.4.0-b34.jar" size="181271" download="eager" />
+    <jar href="lib\hk2-utils-2.4.0-b34.jar" size="118973" download="eager" />
+    <jar href="lib\javassist-3.18.1-GA.jar" size="714194" download="eager" />
+    <jar href="lib\javax.annotation-api-1.2.jar" size="26366" download="eager" />
+    <jar href="lib\javax.inject-2.4.0-b34.jar" size="5950" download="eager" />
+    <jar href="lib\javax.servlet-api-3.0.1.jar" size="85353" download="eager" />
+    <jar href="lib\javax.ws.rs-api-2.0.1.jar" size="115534" download="eager" />
+    <jar href="lib\jaxb-api-2.2.7.jar" size="100146" download="eager" />
+    <jar href="lib\jersey-client.jar" size="167421" download="eager" />
+    <jar href="lib\jersey-common.jar" size="698375" download="eager" />
+    <jar href="lib\jersey-container-servlet-core.jar" size="66270" download="eager" />
+    <jar href="lib\jersey-container-servlet.jar" size="18098" download="eager" />
+    <jar href="lib\jersey-guava-2.22.2.jar" size="971310" download="eager" />
+    <jar href="lib\jersey-media-jaxb.jar" size="72733" download="eager" />
+    <jar href="lib\jersey-server.jar" size="951701" download="eager" />
+    <jar href="lib\jfoenix-8.0.10.jar" size="2710207" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.36-bin.jar" size="972009" download="eager" />
+    <jar href="lib\org.osgi.core-4.2.0.jar" size="246924" download="eager" />
+    <jar href="lib\osgi-resource-locator-1.0.1.jar" size="20235" download="eager" />
+    <jar href="lib\validation-api-1.1.0.Final.jar" size="63777" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MySPAFX" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="org.scd.myspa.gui.Main"  name="MySPAFX" />
+  <update check="always"/>
+</jnlp>
